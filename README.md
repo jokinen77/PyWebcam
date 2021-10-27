@@ -4,7 +4,7 @@
 
 Capture webcam stream and create new virtual webcam. You can modify virtual webcam stream however you like.
 
-![gui](/jokinen77/opencv-testing/images/gui.PNG)
+![gui](https://github.com/jokinen77/opencv-testing/blob/master/images/gui.PNG)
 
 ### Webcam installation
 
