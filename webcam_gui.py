@@ -3,7 +3,7 @@ from PIL import ImageTk, Image
 import cv2
 import time
 
-class GUI:
+class WebcamGUI:
     def __init__(self, cap_id=0, cap_width=1280, cap_height=720, cam=None, cam_width=1280, cam_height=720):
         #Param window
         self.root = Tk()

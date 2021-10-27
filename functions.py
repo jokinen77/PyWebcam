@@ -46,6 +46,3 @@ def get_gaussian_kernel(size=3, sigma=1):
     x = np.linspace(-(size-1)/2, (size-1)/2, size)**2 / (2 * sigma**2)
     kernel = np.exp(- x[:, None] - x[None, :])
     return kernel / kernel.sum()
-
-if __name__ == "__main__":
-    print(np.array([[1,2,3]]))

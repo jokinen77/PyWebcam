@@ -1,7 +1,7 @@
 from functions import *
 import pyvirtualcam
 from hand_detector import full_detect_hands
-from gui import GUI
+from webcam_gui import WebcamGUI
 
 CAP_PROPS = {
     "GAMMA": 1.0,
@@ -25,7 +25,7 @@ CAM_PROPS = {
 
 if __name__ == "__main__":
     with pyvirtualcam.Camera(width=CAM_PROPS["WIDTH"], height=CAM_PROPS["HEIGHT"], fps=CAM_PROPS["FPS"]) as cam:
-        gui = GUI(cap_id=0, cap_width=CAP_PROPS["WIDTH"], cap_height=CAP_PROPS["HEIGHT"], cam=cam)
+        gui = WebcamGUI(cap_id=0, cap_width=CAP_PROPS["WIDTH"], cap_height=CAP_PROPS["HEIGHT"], cam=cam)
         
         gui.create_parameter_slider(1, CAP_PROPS, "GAMMA", "Gamma", values=(0,5,(5-0)/100))
         gui.create_parameter_slider(2, CAP_PROPS, "CONTRAST", "Contrast", values=(0,2,(2-0)/100))
