@@ -10,9 +10,9 @@ mp_hands = mp.solutions.hands
 hands =  mp_hands.Hands(min_detection_confidence=0.7)
 col1 = (255,0,0)
 col2 = (0,255,0)
-thk = 3
+thk = 2
 fng_tips = [4,8,12,16,20]
-radius = 10
+radius = 6
 
 def detect_hands(img, draw=False):
     detect_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)

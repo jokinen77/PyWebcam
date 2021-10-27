@@ -77,10 +77,11 @@ class WebcamGUI:
         window_w = max(self.root.winfo_width() - 6, 240)
         success, img = self.cap.read()
         if success:
+            img = cv2.resize(img, (window_w, int(img.shape[0]*window_w/img.shape[1])))
             img_processed = img.copy()
             for tranformer in self.image_transformers:
                 img_processed = tranformer(img_processed)
-            img_rgb = cv2.cvtColor(cv2.resize(img_processed, (window_w, int(img.shape[0]*window_w/img.shape[1]))), cv2.COLOR_BGR2RGBA)
+            img_rgb = cv2.cvtColor(img_processed, cv2.COLOR_BGR2RGBA)
             img_pil = Image.fromarray(img_rgb)
             img_tk = ImageTk.PhotoImage(image=img_pil)
             self.image_label.img_tk = img_tk
