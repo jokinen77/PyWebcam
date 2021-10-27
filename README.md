@@ -14,4 +14,12 @@ Just playing around with it. See [MediaPipe Hands](https://google.github.io/medi
 
 ## Installation
 
-See [https://pypi.org/project/pyvirtualcam/].
+```bash
+pip install mediapipe
+pip install opencv-python
+pip install pyvirtualcam
+pip install scipy==1.4.1
+etc...
+```
+
+See https://pypi.org/project/pyvirtualcam/.
