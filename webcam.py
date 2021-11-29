@@ -8,8 +8,8 @@ CAP_PROPS = {
     "CONTRAST": 1.0,
     "BRIGHTNESS": 0.0,
     "HUE": 0.0,
-    "WIDTH": 1280,
-    "HEIGHT": 720,
+    "WIDTH": 960,
+    "HEIGHT": 540,
     "GAUSSIAN_KERNEL_SIZE": 0,
     "GAUSSIAN_KERNEL_SIGMA": 0,
     "HAND_DETECTION": False,
@@ -25,7 +25,7 @@ CAM_PROPS = {
 
 if __name__ == "__main__":
     with pyvirtualcam.Camera(width=CAM_PROPS["WIDTH"], height=CAM_PROPS["HEIGHT"], fps=CAM_PROPS["FPS"]) as cam:
-        gui = WebcamGUI(cap_id=0, cap_width=CAP_PROPS["WIDTH"], cap_height=CAP_PROPS["HEIGHT"], cam=cam)
+        gui = WebcamGUI(cap_id=0, cap_width=CAP_PROPS["WIDTH"], cap_height=CAP_PROPS["HEIGHT"], cam_width=CAM_PROPS["WIDTH"], cam_height=CAM_PROPS["HEIGHT"], cam=cam)
         
         gui.create_parameter_slider(1, CAP_PROPS, "GAMMA", "Gamma", values=(0,5,(5-0)/100))
         gui.create_parameter_slider(2, CAP_PROPS, "CONTRAST", "Contrast", values=(0,2,(2-0)/100))
