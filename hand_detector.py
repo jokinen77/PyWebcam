@@ -71,6 +71,7 @@ def full_detect_hands(img, draw=False, skip=False):
     if skip:
         return img
     lbh = detect_hands(img, draw=True)
+    """
     for locations in lbh:
         d1 = get_landmark_distance(locations, 4, 8, img=img, draw=draw)
         d2 = get_landmark_distance(locations, 12, 8, img=img, draw=draw)
@@ -78,4 +79,5 @@ def full_detect_hands(img, draw=False, skip=False):
         d4 = get_landmark_distance(locations, 16, 20, img=img, draw=draw)
         d5 = get_landmark_distance(locations, 4, 20, img=img, draw=draw)
         fng_centroid = get_finger_tip_centroid(locations, img=img, draw=draw)
+    """
     return img
